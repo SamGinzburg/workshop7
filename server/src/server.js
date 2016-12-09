@@ -665,7 +665,7 @@ MongoClient.connect(url, function(err, db) {
              }
             db.collection("users").findOne(
             {
-              _id: userId
+              _id: feedItem.comments[commentIdx].author
             }, function(err, user)
             {
               feedItem.comments[commentIdx].author = user;
@@ -718,7 +718,7 @@ MongoClient.connect(url, function(err, db) {
              }
             db.collection("users").findOne(
             {
-              _id: userId
+              _id: feedItem.comments[commentIdx].author
             }, function(err, user)
             {
               feedItem.comments[commentIdx].author = user;
